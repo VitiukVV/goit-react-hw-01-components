@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
-import { SecondText, TitleTransaction, Wraper } from './transactions.style';
+import {
+  SecondText,
+  TitleTransaction,
+  TransactionsLine,
+  Wraper,
+} from './transactions.style';
 
 export const TransactionsHistory = ({ items }) => {
   return (
@@ -12,7 +17,7 @@ export const TransactionsHistory = ({ items }) => {
         </tr>
       </thead>
 
-      <tbody>
+      <TransactionsLine>
         {items.map(({ id, type, amount, currency }) => (
           <tr key={id}>
             <SecondText>{type}</SecondText>
@@ -20,7 +25,7 @@ export const TransactionsHistory = ({ items }) => {
             <SecondText>{currency}</SecondText>
           </tr>
         ))}
-      </tbody>
+      </TransactionsLine>
     </Wraper>
   );
 };

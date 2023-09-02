@@ -16,9 +16,14 @@ export const TitleTransaction = styled.th`
 `;
 
 export const SecondText = styled.td`
-  background-color: white;
   color: #000;
   text-align: start;
   padding: 15px;
   font-weight: 400;
+`;
+
+export const TransactionsLine = styled.tbody`
+  tr:nth-child(2n) {
+    background: grey;
+  }
 `;
